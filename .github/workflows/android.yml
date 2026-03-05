@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Build APK
+      - name: Create APK
         run: |
           mkdir build
-          echo "Babycare APK" > build/app.apk
+          echo "Babycare Recipes App" > build/app.apk
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: babycare-apk
           path: build/app.apk
